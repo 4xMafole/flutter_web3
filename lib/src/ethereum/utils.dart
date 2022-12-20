@@ -3,7 +3,8 @@ library ethereum.utils;
 
 import 'dart:convert';
 
-import 'package:js/js.dart';
+import 'package:flutter_web3/src/js_stub.dart'
+    if (dart.library.js) 'package:js/js.dart';
 
 /// Convert JS object to Dart object to avoid type error.
 dynamic convertToDart(dynamic jsObject) => _convertToDart(jsObject);

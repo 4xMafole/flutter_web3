@@ -1,8 +1,10 @@
 @JS("window")
 library ethereum;
 
-import 'package:js/js.dart';
-import 'package:js/js_util.dart';
+import 'package:flutter_web3/src/js_stub.dart'
+    if (dart.library.js) 'package:js/js.dart';
+import 'package:flutter_web3/src/js_stub.dart'
+    if (dart.library.js) 'package:js/js_util.dart';
 
 import './utils.dart';
 import '../interop_wrapper.dart';
