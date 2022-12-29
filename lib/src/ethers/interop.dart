@@ -43,6 +43,26 @@ class _ContractImpl {
   external removeAllListeners([dynamic eventName]);
 }
 
+@JS("ContractFactory")
+class _ContractFactoryImpl {
+  external _ContractFactoryImpl(
+      dynamic abi, String bytecode, dynamic providerOrSigner);
+
+  // external _ContractFactoryImpl fromSolidity(
+  //     dynamic compilerOutput, dynamic providerOrSigner);
+
+  external _ContractFactoryImpl connect(dynamic providerOrSigner);
+
+  external Interface get interface;
+
+  external String get bytecode;
+
+  external _SignerImpl? get signer;
+
+  external _ContractImpl deploy(String arg1, String arg2,
+      [_TransactionOverrideImpl overrides]);
+}
+
 @JS()
 @anonymous
 class _EventFilterImpl {

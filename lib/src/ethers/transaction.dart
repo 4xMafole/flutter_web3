@@ -263,6 +263,9 @@ class TransactionRequest extends Interop<_TransactionRequestImpl> {
   /// The nonce for this transaction. This should be set to the number of transactions ever sent from this address.
   int? get nonce => impl.nonce;
 
+  ///The EIP-2718 type of this transaction envelope, or null for to use the network default. To force using a legacy transaction without an envelope, use type 0.
+  int? get type => impl.type;
+
   /// The address (or ENS name) this transaction it to.
   String? get to => impl.to;
 
